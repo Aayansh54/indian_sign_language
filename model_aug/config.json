@@ -1,0 +1,8 @@
+{
+ "features": 161,
+ "two_hand": true,
+ "rotate": false,
+ "extras": true,
+ "threshold": 0.8,
+ "note": "layer math: out = activation(in @ W + b). Features come from features.py build_features()."
+}
