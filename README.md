@@ -55,8 +55,3 @@ documented by the dataset owner before sharing it. Validation and independent
 test metrics are not included here. This demo classifies static alphabet signs;
 it does not translate continuous signing or full ISL sentences.
 
-## License
-
-Add a license appropriate to the code, trained model, dataset, and MediaPipe
-task asset before distributing this repository. Their redistribution terms may
-differ.
