@@ -1,34 +1,37 @@
 # ISL Hand Sign Classifier
 
-A Python webcam demo for recognizing the Indian Sign Language alphabet from
-MediaPipe hand landmarks. The selected `model_aug` export recognizes 26 static
-letters (A–Z).
+A Python webcam demo for recognizing Indian Sign Language (ISL) gestures from
+MediaPipe hand landmarks. Supports real-time recognition across:
+- **Alphabets**: 26 letters (A–Z) from `model_aug`
+- **Digits**: 10 numbers (0–9) from `model_digits_v3`
+- **Phrases**: 10 common phrases from `model_phrases` (`answer`, `book`, `break`, `how are you`, `i need help`, `mistake`, `please`, `stop`, `this`, `where`)
 
 ## Run the webcam demo
 
 From the project root, run:
 
 ```powershell
-python training\live_clean.py --model-dir model_aug --smooth 8
+python training\live_clean.py
 ```
 
-Press `q` in the webcam window to quit. The camera requires local access.
-Predictions are averaged over eight frames and displayed once the averaged
-top-class probability reaches the configured 0.8 threshold.
+### Controls in Webcam Window:
+- `c` — Combined mode (evaluates Alphabets, Digits, and Phrases simultaneously; default)
+- `a` — Alphabet mode only (A–Z)
+- `d` — Digit mode only (0–9)
+- `p` — Phrase mode only (10 phrases)
+- `q` — Quit
+
+Predictions are averaged over eight frames (`--smooth 8`) and displayed once the averaged
+top-class probability reaches the configured threshold.
 
 ## Runtime files
 
-- `training/live_clean.py` — webcam capture and inference loop
+- `training/live_clean.py` — unified webcam capture and multi-model inference loop
 - `training/features.py` — landmark preprocessing and feature construction
-- `model_aug/config.json` — feature and runtime settings
-- `model_aug/labels.json` — output class order (A through Z)
-- `model_aug/isl_clean_mlp.joblib` — trained scikit-learn classifier
+- `model_aug/` — trained alphabet classifier (`isl_clean_mlp.joblib`, `labels.json`, `config.json`)
+- `model_digits_v3/` — trained digit classifier (`isl_digits_mlp.joblib`, `labels.json`, `config.json`)
+- `model_phrases/` — trained phrase classifier (`isl_phrases_mlp.joblib`, `labels.json`, `config.json`)
 - `model/hand_landmarker.task` — MediaPipe hand landmark model
-
-The live script loads `model/hand_landmarker.task` even when another
-`--model-dir` is selected. The JSON model export and parity fixture are useful
-for other runtimes and parity checks; this Python live script loads the joblib
-model.
 
 ## Model input
 

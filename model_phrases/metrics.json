@@ -1,0 +1,410 @@
+{
+  "validation_accuracy": 0.922077922077922,
+  "test_accuracy": 0.9230769230769231,
+  "validation_report": {
+    "answer": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "book": {
+      "precision": 0.8888888888888888,
+      "recall": 1.0,
+      "f1-score": 0.9411764705882353,
+      "support": 8.0
+    },
+    "break": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1-score": 0.6666666666666666,
+      "support": 8.0
+    },
+    "how are you": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1-score": 0.8571428571428571,
+      "support": 8.0
+    },
+    "i need help": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "mistake": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "please": {
+      "precision": 0.6153846153846154,
+      "recall": 1.0,
+      "f1-score": 0.7619047619047619,
+      "support": 8.0
+    },
+    "stop": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5.0
+    },
+    "this": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "where": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "accuracy": 0.922077922077922,
+    "macro avg": {
+      "precision": 0.9504273504273504,
+      "recall": 0.925,
+      "f1-score": 0.922689075630252,
+      "support": 77.0
+    },
+    "weighted avg": {
+      "precision": 0.9484959484959485,
+      "recall": 0.922077922077922,
+      "f1-score": 0.9196769616937683,
+      "support": 77.0
+    }
+  },
+  "test_report": {
+    "answer": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "book": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "break": {
+      "precision": 1.0,
+      "recall": 0.875,
+      "f1-score": 0.9333333333333333,
+      "support": 8.0
+    },
+    "how are you": {
+      "precision": 0.8,
+      "recall": 0.5,
+      "f1-score": 0.6153846153846154,
+      "support": 8.0
+    },
+    "i need help": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "mistake": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "please": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1-score": 0.8,
+      "support": 8.0
+    },
+    "stop": {
+      "precision": 0.8333333333333334,
+      "recall": 0.8333333333333334,
+      "f1-score": 0.8333333333333334,
+      "support": 6.0
+    },
+    "this": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "where": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "accuracy": 0.9230769230769231,
+    "macro avg": {
+      "precision": 0.93,
+      "recall": 0.9208333333333334,
+      "f1-score": 0.9182051282051281,
+      "support": 78.0
+    },
+    "weighted avg": {
+      "precision": 0.9324786324786325,
+      "recall": 0.9230769230769231,
+      "f1-score": 0.9203813280736356,
+      "support": 78.0
+    }
+  },
+  "validation_confusion_matrix": [
+    [
+      8,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      8,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      4,
+      0,
+      0,
+      0,
+      4,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      6,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      8,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      8,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      8,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      8,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      8
+    ]
+  ],
+  "test_confusion_matrix": [
+    [
+      8,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      8,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      7,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      4,
+      0,
+      0,
+      3,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      8,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      8,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      8,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      5,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      8,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      8
+    ]
+  ],
+  "label_order": [
+    "answer",
+    "book",
+    "break",
+    "how are you",
+    "i need help",
+    "mistake",
+    "please",
+    "stop",
+    "this",
+    "where"
+  ]
+}

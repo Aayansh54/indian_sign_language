@@ -1,0 +1,9 @@
+{
+  "features": 161,
+  "two_hand": true,
+  "rotate": false,
+  "extras": true,
+  "aspect": 1.3333,
+  "threshold": 0.8,
+  "note": "Features are produced by training/features.py build_features(). Layer math: out = activation(in @ W + b)."
+}
