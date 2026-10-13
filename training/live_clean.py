@@ -5,7 +5,7 @@ Phrase recognition is intentionally kept in a separate pipeline.
 Controls:
     Q = Quit
 """
-
+import argparse
 import collections
 import json
 import time
@@ -22,11 +22,31 @@ BASE = Path(__file__).resolve().parent.parent
 TASK_FILE = BASE / "model" / "hand_landmarker.task"
 
 # Existing model locations
-ALPHABET_MODEL_DIR = BASE / "model"
-DIGIT_MODEL_DIR = BASE / "model_digits_v3"
+# Command-line configuration
+parser = argparse.ArgumentParser()
+parser.add_argument("--model-dir", type=Path, default=Path("model_aug"))
+parser.add_argument(
+    "--digit-model-dir",
+    type=Path,
+    default=Path("model_digits_v3"),
+)
+parser.add_argument("--smooth", type=int, default=8)
+args = parser.parse_args()
+
+# Resolve relative paths from the project root.
+ALPHABET_MODEL_DIR = (
+    args.model_dir
+    if args.model_dir.is_absolute()
+    else BASE / args.model_dir
+)
+DIGIT_MODEL_DIR = (
+    args.digit_model_dir
+    if args.digit_model_dir.is_absolute()
+    else BASE / args.digit_model_dir
+)
 
 STABLE_FRAMES = 5
-SMOOTH_FRAMES = 8
+SMOOTH_FRAMES = max(1, args.smooth)
 
 
 def load_model(model_dir, expected_labels=None, model_filename="isl_clean_mlp.joblib"):
