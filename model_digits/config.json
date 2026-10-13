@@ -1,0 +1,9 @@
+{
+  "features": 161,
+  "two_hand": true,
+  "rotate": false,
+  "extras": true,
+  "aspect": 1.0,
+  "threshold": 0.8,
+  "note": "Features are produced by training/features.py build_features(). Threshold is a default, not validation-calibrated."
+}
